@@ -1,4 +1,4 @@
-// pages/personal_information/personal_information.js
+// pages/Developer-Info/Developer-Info.js
 Page({
 
   /**
@@ -55,11 +55,6 @@ Page({
    */
   onReachBottom() {
 
-  },
-  goto:function(){
-    wx.navigateTo({
-      url: '/pages/Developer-Info/Developer-Info',
-    })
   },
 
   /**
