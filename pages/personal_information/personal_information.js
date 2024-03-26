@@ -8,6 +8,32 @@ Page({
 
   },
 
+  post:function(){  
+    wx.navigateTo({  
+      url: '/pages/personal_information/subpage/post/post',  
+    })  
+  },
+  comment:function(){  
+    wx.navigateTo({  
+      url: '/pages/personal_information/subpage/comment/comment',  
+    })  
+  },
+  picture:function(){  
+    wx.navigateTo({  
+      url: '/pages/personal_information/subpage/picture/picture',  
+    })  
+  },
+  Modifyphoto:function(){  
+    wx.navigateTo({  
+      url: '/pages/personal_information/subpage/Modifyphoto/Modifyphoto',  
+    })  
+  },
+  about:function(){  
+    wx.navigateTo({  
+      url: '/pages/personal_information/subpage/about/about',  
+    })  
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

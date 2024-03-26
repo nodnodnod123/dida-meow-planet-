@@ -5,7 +5,11 @@
     "pages/photo_recognize/photo_recognize",
     "pages/forum/forum",
     "pages/personal_information/personal_information",
-    "pages/Developer-Info/Developer-Info"
+    "pages/personal_information/subpage/post/post",
+    "pages/personal_information/subpage/comment/comment",
+    "pages/personal_information/subpage/picture/picture",
+    "pages/personal_information/subpage/Modifyphoto/Modifyphoto",
+    "pages/personal_information/subpage/about/about"
   ],
   "window": { 
     "navigationBarTextStyle": "black",

@@ -13,34 +13,40 @@
     </view>
   </view>
 
-  <!--其他信息-->
+  <!--互动区域-->
   <view class="partTwo">  <!--第二部分-->
     <!--我的身份(管理员ro普通用户)-->
     <view class="identity">
       我的身份:
       <!--此处插入身份-->
     </view>
-    <!--我的-->
+
+    <!--我的互动-->
     <view class="Undetermined1">
-      我的？？:
-      <!--此处插入？？-->
+      <button class="post1" id="post2" bindtap="post">
+        我的帖子
+      </button>
+
     </view>
     <view class="Undetermined2">
-      我的？？:
-      <!--此处插入？？-->
+      <button class="comment1" id="comment2" bindtap="comment">
+        我的评论
+      </button>
     </view>
     <view class="Undetermined3">
-      我的？？:
-      <!--此处插入？？-->
+      <button class="picture1" id="picture2" bindtap="picture">
+        我的照片
+      </button>
     </view>
     <view class="Undetermined4">
-      我的？？:
-      <!--此处插入？？-->
+      <button class="Modifyphoto1" id="Modifyphoto2" bindtap="Modifyphoto">
+        修改我的信息
+      </button>
     </view>
   </view>
 
   <!--其他信息-->
-  <button class="about" id="button1" bindtap="goto">
+  <button class="about1" id="about2" bindtap="about">
     了解喵汪星球
   </button>
 </view>
