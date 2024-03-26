@@ -1,15 +1,53 @@
 {
   "pages": [
-    "pages/grxx/grxx",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/animals_show/animals_show",
+    "pages/knowledge/knowledge",
+    "pages/photo_recognize/photo_recognize",
+    "pages/forum/forum",
+    "pages/personal_information/personal_information",
+    "pages/Developer-Info/Developer-Info"
   ],
   "window": { 
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "地大喵汪星球",
-    "navigationBarBackgroundColor": "#35B6DD"
+    "navigationBarBackgroundColor": "#ff6e5a"
   },
-  
+  "tabBar": {
+    "selectedColor": "#ff6e5a",
+    "color": "#666",
+    "list": [
+      {
+      "pagePath": "pages/animals_show/animals_show",
+      "iconPath": "./iconfont/猫爪_未选中.png",
+      "selectedIconPath": "./iconfont/猫爪_选中.png",
+      "text": "靓照"
+    },
+    {
+      "pagePath": "pages/knowledge/knowledge",
+      "iconPath": "./iconfont/百科_未选中.png",
+      "selectedIconPath": "./iconfont/百科_选中.png",
+      "text": "百科"
+    },
+    {
+      "pagePath": "pages/photo_recognize/photo_recognize",
+      "iconPath": "./iconfont/拍照_未选中.png",
+      "selectedIconPath": "./iconfont/拍照_选中.png",
+      "text": "识猫"
+    },
+    {
+      "pagePath": "pages/forum/forum",
+      "iconPath": "./iconfont/论坛_未选中.png",
+      "selectedIconPath": "./iconfont/论坛_选中.png",
+      "text": "论坛"
+    },
+    {
+      "pagePath": "pages/personal_information/personal_information",
+      "iconPath": "./iconfont/我的_未选中.png",
+      "selectedIconPath": "./iconfont/我的_选中.png",
+      "text": "我的"
+    }
+  ]
+  },
   "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",

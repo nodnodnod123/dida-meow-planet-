@@ -6,6 +6,9 @@
     "include": []
   },
   "setting": {
+    "useCompilerPlugins": [
+      "sass"
+    ],
     "coverView": true,
     "es6": true,
     "postcss": true,

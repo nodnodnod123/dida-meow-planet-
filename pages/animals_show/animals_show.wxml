@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="search-container">
+  <view class="search-left">
+    <view class="iconfont icon-sousuo"></view>
+    <input type="text" placeholder=" 快来搜索喜欢的小猫小狗叭~"/>
+    <button>搜索</button>
+  </view>
+</view>
+</view>

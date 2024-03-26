@@ -1,0 +1,46 @@
+/**index.wxss**/
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  padding: 15rpx 20rpx;
+}
+
+.search-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 40rpx;
+  margin-right: 50rpx;
+}
+
+.search-left input{
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing:content-box;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  height: 30rpx;
+  width: 453rpx;
+}
+.search-left button {
+  display: inline-block;
+  height: 35rpx;
+  width: 80rpx;
+  line-height: 35rpx;
+  border-radius: 40rpx;
+  background-color: #ff6e5a;
+  color: white;
+  box-sizing:content-box;
+  vertical-align: middle;
+}
+
+.search-left .iconfont {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
