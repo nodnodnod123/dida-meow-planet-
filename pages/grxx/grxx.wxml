@@ -1,0 +1,47 @@
+<!--pages/grxx/grxx.wxml-->
+<view class='container'>
+  <!--头像名称-->
+  <view class="partOne">   <!--第一部分-->
+    <view class="userinfo">   <!--用户信息-->
+
+      <view class="userinfo-avatar">
+        <!--展示微信用户头像，不再返回，展示灰色头像-->
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <!--展示微信用户名称，不再返回，显示微信用户-->
+      <open-data type="userNickName"></open-data>
+
+    </view>
+  </view>
+
+  <!--其他信息-->
+  <view class="partTwo">  <!--第二部分-->
+    <!--我的身份(管理员ro普通用户)-->
+    <view class="identity">
+      我的身份:
+      <!--此处插入身份-->
+    </view>
+    <!--我的-->
+    <view class="Undetermined1">
+      我的？？:
+      <!--此处插入？？-->
+    </view>
+    <view class="Undetermined2">
+      我的？？:
+      <!--此处插入？？-->
+    </view>
+    <view class="Undetermined3">
+      我的？？:
+      <!--此处插入？？-->
+    </view>
+    <view class="Undetermined4">
+      我的？？:
+      <!--此处插入？？-->
+    </view>
+  </view>
+
+  <!--其他信息-->
+  <button class="about" id="button1" bindtap="goto">
+    了解喵汪星球
+  </button>
+</view>

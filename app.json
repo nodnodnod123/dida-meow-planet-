@@ -1,11 +1,12 @@
 {
   "pages": [
+    "pages/grxx/grxx",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window": { 
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "地大喵汪",
+    "navigationBarTitleText": "地大喵汪星球",
     "navigationBarBackgroundColor": "#35B6DD"
   },
   
