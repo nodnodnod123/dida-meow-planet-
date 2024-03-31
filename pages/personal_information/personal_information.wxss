@@ -2,7 +2,7 @@
 .container{
   background-color: #ffffff;
   height : 100%;
-  background-color: #fffaca;
+  background-color: #f8f5dd;
   padding-bottom: 100%;
 }
 .partOne {
@@ -10,7 +10,7 @@
   width: 100%;    /*宽度扩展到全部*/
   display: flex;
   justify-content: space-between;
-  background-color: #b6d192;
+  background-color: #def1c3;
   padding-top: 80rpx;
   padding-bottom: 130rpx;
 }
@@ -35,7 +35,7 @@
   width: 80%;
   margin-left: 10%;       /*视图框与左边界距离*/
   margin-top: -30rpx;    /*视图与上一视图间距*/
-  background-color: #bde9e2;    /*视图背景颜色*/
+  background-color: #e5fcf8;    /*视图背景颜色*/
   border: 1rpx solid rgb(150, 150, 150);    /*边框颜色*/
   border-radius: 25rpx;
 }
@@ -81,7 +81,7 @@
   width: 100%;
   margin-left: 0%;       /*视图框与左边界距离*/
   margin-top: 30rpx;    /*视图与上一视图间距*/
-  background-color: #abebff;    /*视图背景颜色*/
+  background-color: #e5fcf8;    /*视图背景颜色*/
   border: 1rpx solid rgb(150, 150, 150);    /*边框颜色*/
   border-radius: 25rpx;
 }
@@ -91,7 +91,7 @@
   width:120%;
   margin-left: -50rpx;       /*视图框与左边界距离*/
   margin-top: -10rpx;    /*视图与上一视图间距*/
-  background-color: #bde9e2;    /*视图背景颜色*/
+  background-color: #e5fcf8;    /*视图背景颜色*/
   text-align: justify;
 }
 .comment1{
@@ -99,7 +99,7 @@
   width:120%;
   margin-left: -50rpx;       /*视图框与左边界距离*/
   margin-top: -10rpx;    /*视图与上一视图间距*/
-  background-color: #bde9e2;    /*视图背景颜色*/
+  background-color: #e5fcf8;    /*视图背景颜色*/
   text-align: justify;
 }
 .picture1{
@@ -107,7 +107,7 @@
   width:120%;
   margin-left: -50rpx;       /*视图框与左边界距离*/
   margin-top: -10rpx;    /*视图与上一视图间距*/
-  background-color: #bde9e2;    /*视图背景颜色*/
+  background-color: #e5fcf8;    /*视图背景颜色*/
   text-align: justify;
 }
 .Modifyphoto1{
@@ -115,7 +115,7 @@
   width:120%;
   margin-left: -50rpx;       /*视图框与左边界距离*/
   margin-top: -10rpx;    /*视图与上一视图间距*/
-  background-color: #bde9e2;    /*视图背景颜色*/
+  background-color: #e5fcf8;    /*视图背景颜色*/
   text-align: justify;
 }
 
