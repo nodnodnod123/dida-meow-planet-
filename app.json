@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/animals_show/animals_show",
+    "pages/animals_Info/animals_Info",
     "pages/knowledge/knowledge",
     "pages/photo_recognize/photo_recognize",
     "pages/forum/forum",
