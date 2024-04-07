@@ -1,0 +1,77 @@
+<!-- pages/animals_Info/animals_Info.wxml
+<text>pages/animals_Info/animals_Info.wxml</text>  -->
+<view class="animal-info">  
+  <image src="{{animal.url}}" mode="aspectFit" class="animal-photo" bindload="imageLoaded" binderror="imageError"></image>  
+  <view class="info-group">  
+    <image class="info-icon" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/花.png" mode="aspectFit"></image>
+    <text class="info-label">姓名:</text>  
+    <text class="info-value">{{animal.name}}</text>  
+  </view>  
+  <view class="info-group">  
+    <image class="info-icon" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/树木.png"  mode="aspectFit"></image>
+    <text class="info-label">年龄:</text>  
+    <text class="info-value">{{animal.age}}</text>  
+  </view>  
+  <!-- 以此类推，为每个信息项添加对应的<view class="info-group"> -->   
+  <view class="info-group">  
+    <image class="info-icon" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/栅栏.png"  mode="aspectFit"></image>
+    <text class="info-label">性格:</text>  
+    <text class="info-value">{{animal.character}}</text>  
+  </view>  
+  <view class="info-group">  
+    <image class="info-icon" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/水果.png"  mode="aspectFit"></image>
+    <text class="info-label">健康状态:</text>  
+    <text class="info-value">{{animal.health}}</text>  
+  </view>  
+  <view class="info-group">  
+    <image class="info-icon" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/玫瑰花.png"  mode="aspectFit"></image>
+    <text class="info-label">常驻地:</text>  
+    <text class="info-value">{{animal.region}}</text>  
+  </view>  
+  <view class="info-group">  
+    <image class="info-icon" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/自然.png"  mode="aspectFit"></image>
+    <text class="info-label">性别:</text>  
+    <text class="info-value">{{animal.sex}}</text>  
+  </view>  
+  <view class="info-group">  
+    <image class="info-icon" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/松果.png"  mode="aspectFit"></image>
+    <text class="info-label">是否绝育:</text>  
+    <text class="info-value">{{animal.ster}}</text>  
+  </view> 
+  <view class="info-group">  
+    <image class="info-icon" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/仙人掌.png"  mode="aspectFit"></image>
+    <text class="info-label">其他信息:</text>  
+    <text class="info-value">{{animal.else}}</text>  
+  </view>  
+  <view class="info-group">  
+    <image class="info-icon" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/花 (1).png"  mode="aspectFit"></image>
+    <text class="info-label">点赞数:</text>  
+    <text class="info-value">{{animal.likes}}</text>  
+  </view>  
+  <view class="container">  
+  <button bindtap="handleLike" class="{{isLiked ? 'liked' : 'unliked'}}">  
+    {{isLiked ? '已点赞' : '点赞'}}  
+  </button>  
+</view>
+<!--评论-->
+<!--留言板实现-->
+<view class='top'>
+            <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
+                <text class="{{currentTabsIndex==index?'on':''}}">精彩评论</text>
+            </view>
+</view>
+
+
+<block wx:for="{{animal.comment}}}" wx:key="id">
+ <view>
+ <text>{{item.name}}:</text>
+ <text>{{item.content}}</text>
+ </view>   
+</block>
+
+
+<view class="talk">
+    <input class='input' type='text' value='' confirm-type='send' placeholder='发表评论！' bindinput='talkInput' value='{{inputValue}}'></input>
+    <button  class="confirm"  bindtap="submit">确定</button>
+</view>
+</view>

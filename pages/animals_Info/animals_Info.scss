@@ -1,0 +1,207 @@
+.animal-info {  
+ // flex-direction: column;  
+  top: 0;  
+  left: 0;  
+  width: 100%; /* 宽度覆盖整个页面 */  
+  height: 100vh; /* 高度覆盖视口高度 */  
+ z-index: -1; /* 确保背景在内容之下 */  
+  background: linear-gradient(to right, #ff996631, #6c92d85d);
+  padding: 10px;  
+  border-radius: 5px;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 使用更深的阴影颜色来增强立体感 */  
+  border: 1px solid rgba(0, 0, 0, 0.2); /* 添加1像素宽的实线边框 */  
+  transition: all 0.3s ease; /* 添加过渡效果 */  
+}  
+.info-icon {  
+  width: 20px; /* 调整为适合你的组件的尺寸 */  
+  height: 20px;
+}
+/* 当鼠标悬停在.animal-info上时，改变边框和阴影效果 */  
+.animal-info:hover {  
+  border-color: rgba(0, 0, 0, 0.4); /* 加深边框颜色 */  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 增加阴影大小和深度 */  
+} 
+.animal-photo {  
+  width: 100%;  
+  max-height: 200px;  
+  object-fit: cover;  
+  border-radius: 5px;  
+  margin-bottom: 10px;  
+}   
+.info-group {  
+ display: flex;   
+  margin-bottom: 5px;  
+}  
+.info-label {  
+  font-weight: bold;  
+  text-align: left;
+  color: #333;  
+}  
+.info-value {  
+  text-align: left;
+  color: #666;  
+}
+.container {  
+  margin-bottom: 30px; /* 确保按钮和评论之间有足够的空间 */ 
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+}  
+.liked {  
+  background-color: rgba(22, 79, 201, 0.644); /* 点赞后的按钮颜色 */  
+  color: white; /* 点赞后的按钮文字颜色 */  
+}   
+.unliked {  
+  background-color: grey; /* 未点赞时的按钮颜色 */  
+  color: white; /* 未点赞时的按钮文字颜色 */  
+}   
+.info {  
+  margin-top: 10px;  
+}
+.newsaContent {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.bdescription {
+  color: #7a7979;
+   font-size: 15px;
+   display: -webkit-box;
+  text-align: left;
+  margin:0px 20px 20px 20px;
+   text-indent: 60rpx;
+}
+.adescription {
+  color: rgba(56, 56, 56, 0.849);
+  font-size: 20px;
+  display: flex;  
+justify-content: center;
+ margin:20px 40px 20px 40px;
+}
+.hdescription {
+  
+  color: #7a7979;
+   font-size: 15px;
+   display: -webkit-box;
+  text-align: left;
+  margin:0px 20px 20px 20px;
+}
+.newsaImage {    
+width:600rpx;
+height:400rpx; 
+margin-bottom: 20px;
+margin-left: 80rpx;
+}
+.top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 80rpx;
+    background-color: #fff;
+    border-bottom: solid 1px #efefef;
+    margin-top:-20px;
+}
+
+.top-item {
+    line-height: 80rpx;
+    flex: 1;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 30px;
+    color: #666;
+    padding: 0 20rpx;
+}
+
+.top-item text {
+    display: inline-block;
+    line-height: 80rpx;
+    flex: 1;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 30rpx;
+    color: #666;
+    padding: 0 20rpx;
+}
+.talk{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom:0;
+  background-color: white;
+}
+.user-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin: 20rpx 20rpx 0 20rpx;
+}
+
+.user-head {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.user-name-time {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.user-name {
+  font-size: 24rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.user-publish-time {
+  font-size: 20rpx;
+  color: #999;
+}
+.content {
+  display: flex;
+  margin: 20rpx 10rpx;
+  flex-direction: column;
+  margin-top:20rpx;
+  width: 85%;
+}
+
+.content-scroll {
+  width: 100%;
+}
+
+.content-text {
+  font-size: 30rpx;
+  color: #666;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+-webkit-line-clamp: 10;
+-webkit-box-orient: vertical;
+margin: 20rpx 0 0 40rpx;
+}
+.input{
+  width: 540rpx;
+  margin-right: 30rpx;
+  margin-left: 50rpx;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  border-bottom: solid 1px #7e7d7d;
+}
+.confirm{
+  font-size: 30rpx;
+    margin-top: 30rpx;
+  margin-bottom: 50rpx;
+  margin-right: 20rpx;
+}
+button::after {
+  border: none;
+}
