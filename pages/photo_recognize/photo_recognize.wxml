@@ -1,0 +1,17 @@
+<view class="fa">
+  <view class="top">
+    <image src="{{imgSrc}}"></image>
+  </view>
+  <view class="middle">
+    <view class="photograph" data-flag="0" bindtap="getImage">拍照识动物</view>
+    <view class="photos" data-flag="1" bindtap="getImage">相册选择</view>
+  </view>
+  <view class="bottom" data-flag="1" bindtap="identify"> 
+    开始识别
+  </view>
+<view wx:for="{{animal}}" wx:key="score">  
+  <view class="score-name-container">  
+    名称：{{item.name}} || 相似度：{{item.score}} 
+  </view>   
+</view>
+</view>

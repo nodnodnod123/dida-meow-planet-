@@ -1,1 +1,80 @@
-/* pages/photo_recognize/photo_recognize.wxss */
+/* 基础样式 */  
+.fa {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+  padding: 20px;  
+  background-color: #fff;  
+  border-radius: 10px;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+}  
+  
+.top {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  margin-bottom: 20px;  
+}  
+  
+.top image {  
+  width: 200px;  
+  height: 200px;  
+  border-radius: 50%;  
+  object-fit: cover;  
+}  
+  
+.middle {  
+  display: flex;  
+  justify-content: space-around;  
+  align-items: center;  
+  margin-bottom: 20px;  
+}  
+  
+.photograph, .photos {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  padding: 10px 20px;  
+  border: 1px solid #ccc;  
+  border-radius: 5px;  
+  font-size: 16px;  
+  cursor: pointer;  
+}  
+  
+.photograph {  
+  background-color: #f0f0f0;  
+  margin-right: 10px;  
+}  
+  
+.photos {  
+  background-color: #e0e0e0;  
+  margin-right: 10px;  
+}  
+  
+.animal {  
+  font-size: 18px;  
+  font-weight: bold;  
+  margin-bottom: 20px;  
+}  
+  
+.bottom {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  padding: 15px 30px;  
+  border-radius: 5px;  
+  background-color: #f0f0f0;  
+  margin-bottom: 30px;
+  font-size: 18px;  
+  cursor: pointer;  
+}   
+
+/* 为每个分数和名称的视图设置样式 */  
+.score-name-container {  
+  display: flex; /* 使用 flex 布局 */  
+  align-items:flex-start; /* 对齐 */  
+  justify-content: flex-start; /* 水平靠左对齐 */  
+  padding: 10px; /* 设置内边距，可根据需要调整 */  
+  border-bottom: 1px solid #eee; /* 可选：为每行添加底部边框，分隔不同行 */  
+}
