@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="search-container">
+    <view class="search-left">
+     <view class="iconfont icon-sousuo"></view>
+      <input type="text" placeholder=" 快来搜索感兴趣的帖子叭~"/>
+      <button>搜索</button>
+    </view>
+  </view>
+  <view>
+    <block wx:for="{{posts}}" wx:key="postId">
+      <view wx:key="postId" class="post">
+        <text>{{item.title}}</text>
+        <button bindtap="gotoPostDetail" data-post-id="{{item._id}}">查看详情</button>
+      </view>
+    </block>
+  </view>
+</view>

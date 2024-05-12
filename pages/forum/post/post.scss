@@ -1,0 +1,73 @@
+/* pages/forum/post/post.wxss */
+.container {
+  height: 100vh; /* 设置容器高度为屏幕高度 */
+  display: flex;
+  flex-direction: column;
+}
+
+.post-container {
+  font-size: 20px;
+  text-align: center;
+
+  .post-title {
+    font-size: 24px;
+  }
+
+  .post-content {
+    margin-top: 20px;
+    color: #333; // 设置内容颜色为深灰色
+    line-height: 1.5; // 设置行高为 1.5 倍
+  }
+
+  .like-button {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+.comment-container {
+  height: 70%;
+  border: 1px solid #ccc; // 设置边框为灰色
+  padding: 10px; // 设置内边距
+  margin-top: 20px; // 设置上边距
+  flex-grow: 1; /* 让评论容器占据剩余的空间 */
+  padding: 20px;
+  overflow-y: auto; /* 允许评论列表内容超出屏幕高度时出现滚动条 */
+}
+.container2 {
+margin-top: 30rpx;    /*视图与上一视图间距*/
+height: 80px;      /*边框高度*/
+width: 80%;
+padding: 10rpx;
+margin-left: 50rpx;       /*视图框与左边界距离*/
+border: 1rpx solid rgb(235, 169, 205);    /*边框颜色*/
+border-radius: 25rpx
+}
+
+.publication{
+  height: 4ch;
+  width: 4ch;
+  background-color: #f5f8e5;
+  margin-top: 20rpx;    /*视图与上一视图间距*/
+}
+
+.comment-item {
+  margin-top: 10px; // 设置评论项之间的上边距
+}
+
+.publish-container {
+  padding: 20px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+

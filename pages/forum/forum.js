@@ -1,19 +1,45 @@
 // pages/forum/forum.js
-Page({
+const app = getApp();
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-
+      posts: [], // 存放帖子列表数据
   },
+
+  onLoad: function () {
+    // 加载帖子列表数据
+    this.getPosts();
+  },
+  // 获取帖子列表数据
+  getPosts: function () {
+    const db = wx.cloud.database();
+    db.collection('posts').get().then(res => {
+      this.setData({
+        posts: res.data
+      });
+    }).catch(err => {
+      console.error('获取帖子列表失败', err);
+    });
+  },
+  // 跳转到帖子详情页面
+  gotoPostDetail: function (event) {
+    const postId = event.currentTarget.dataset.postId;
+    wx.navigateTo({
+      url: '/pages/forum/post/post?id=' + postId
+    });
+  },
+  
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
+  /*onLoad(options) {
 
   },
+ */
 
   /**
    * 生命周期函数--监听页面初次渲染完成

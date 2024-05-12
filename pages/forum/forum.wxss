@@ -1,1 +1,56 @@
 /* pages/forum/forum.wxss */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  padding: 15rpx 20rpx;
+}
+
+.search-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 40rpx;
+  margin-right: 50rpx;
+}
+
+.search-left input{
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing:content-box;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  height: 30rpx;
+  width: 453rpx;
+}
+.search-left button {
+  display: inline-block;
+  height: 35rpx;
+  width: 80rpx;
+  line-height: 35rpx;
+  border-radius: 40rpx;
+  background-color: #ff6e5a;
+  color: white;
+  box-sizing:content-box;
+  vertical-align: middle;
+}
+
+.search-left .iconfont {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.post {
+  width: calc(90%); /* 设置容器宽度为屏幕宽度90% */
+  border: 5px solid rgb(233, 189, 189); /* 边框样式 */
+  padding: 20px; /* 内边距 */
+  margin-top: 5px;
+  margin-bottom: 10px; /* 底部外边距，用于与下一个帖子隔开 */
+  border-radius: 8px; /* 圆角半径 */
+  text-align: center; /* 文本居中对齐 */
+}
+
+
