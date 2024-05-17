@@ -11,25 +11,47 @@
 
     <view style="height: 20px;"></view> <!-- 点赞与内容拉开距离 -->
 
-    <button bindtap="likePost" data-post-id="{{post._id}}" class="like-button">（{{post.up}}）点赞</button>
+    <view class="like-button" bindtap="handleLike">  
+    <image src="{{isLiked ? 'cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/小图标合集/点赞 (1).png' : 'cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/小图标合集/点赞.png'}}" class="like-image" />  
+    <text class="like-text">{{post.up}}人点赞</text>  
+  </view>  
+
   </view>
 
-  <!-- 评论列表 -->
-  <view class="comment-container">
-    <block wx:for="{{comments}}" wx:key="commentId">
-      <view class="comment-item">
-        <text>{{item.comments}}</text> 
-        ____________________________________________________________
+   
+ <!--留言板实现-->
+ <view class='top'>
+      <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
+          <text class="{{currentTabsIndex==index?'on':''}}">精彩评论</text>
       </view>
-    </block>
-  </view>
-</scroll-view>
+</view>
+    <view class='newsBox'>
+    <view  wx:for="{{post.comments}}" wx:key="date">
+      <view class='container-content'>
+          <view class='user-info'>
+            <view class='user-name-time'>
+              <view class='user-name'>{{item.name}}:</view>
+              <view class='user-publish-time'>{{item.date}}</view>
+            </view>
+            </view>
+            <view class='content'>
+            <!-- 显示文本 -->
+              <view style="display:flex;flex-direction:column">
+                <text class='content-text'>{{item.content}}</text>
+              </view>
+             </view>
+            </view>
+    </view>
+    </view>
+
+</scroll-view >
+
 </view>
 
 <!-- 发布评论 -->
 <view class="publish-container">
   <view class="container2">
-    <input placeholder="请输入评论内容" value="{{newCommentContent}}" bindinput="Comment"></input>
+    <input placeholder="请输入评论内容" value="{{knowledgecontent}}"type="text" bindinput="Comment"></input>
   </view>
   <button class="publication" bindtap="publishComment">发表评论</button>
 </view>

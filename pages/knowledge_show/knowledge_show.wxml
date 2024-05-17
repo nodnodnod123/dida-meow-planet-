@@ -1,0 +1,55 @@
+<!-- 总容器 -->
+<view class="container">
+  <!-- 标题 -->
+  <text class="title" user-select="true">{{essay.title}}</text>
+  <!-- 内容 -->
+  <text class="content" user-select="true" style="white-space: pre-line;">{{essay.content}}</text>
+  <!-- 分割线 -->
+  <view class="divLine"></view>
+
+  <!-- 除正文之外的控件的容器 -->
+  <view class="others_container">
+    <!-- 点赞 -->
+    <view class="likes">
+      <image src="{{liked}}" bindtap="handleLike"  wx:if="{{isLiked}}" mode="aspectFill" />
+      <image src="{{unlike}}" bindtap="handleLike"  wx:else mode="widthFix" />
+      <view class='likes_title'>{{essay.likes}}人点赞</view>
+    </view>
+    <!-- 阅读原文 -->
+    <view class="Read_original_essay">
+      <navigator url="#"> <!-- 这里填充跳转链接 -->
+        <text>点击此处阅读原文</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 评论 -->
+  <view class="comments_container">
+    <input type="text" placeholder="发表评论！" value="{{knowledgecontent}}" bindinput="talkInput"/>  <!-- 评论输入框 -->
+    <button class="comments_submit" bind:tap="submit">提交</button>
+  </view>
+   
+ <!--留言板实现-->
+ <view class='top'>
+      <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
+          <text class="{{currentTabsIndex==index?'on':''}}">精彩评论</text>
+      </view>
+</view>
+    <view class='newsBox'>
+    <view  wx:for="{{essay.comments}}" wx:key="date">
+      <view class='container-content'>
+          <view class='user-info'>
+            <view class='user-name-time'>
+              <view class='user-name'>{{item.name}}:</view>
+              <view class='user-publish-time'>{{item.date}}</view>
+            </view>
+            </view>
+            <view class='content'>
+            <!-- 显示文本 -->
+              <view style="display:flex;flex-direction:column">
+                <text class='content-text'>{{item.content}}</text>
+              </view>
+             </view>
+            </view>
+    </view>
+    </view>
+</view>

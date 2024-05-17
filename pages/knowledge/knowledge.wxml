@@ -1,0 +1,28 @@
+<view class="container">
+    <!-- 搜索框 -->
+  <view class="search-container">
+    <view class="search-left">
+      <view class="iconfont icon-sousuo"></view>
+      <input type="text" placeholder=" 搜索" bindinput="search"/>
+    </view>
+  </view> 
+  <!-- "独家资料"标签行 -->
+  <view class="knowledge-label">
+    <text>独家资料</text>
+  </view> 
+  <!-- 资料列表 -->
+  <view class="knowledge-list" wx:for="{{items}}" wx:key="id">
+    <!-- 跳转页面 -->
+    <navigator url="/pages/knowledge_show/knowledge_show?textId={{index}}" class="knowledge">
+      <image src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/知识百科图片/文章贴图1.jpg" mode="aspectFit"/>
+      <view class="knowledge_discription">
+        <text class="knowledge_title">{{item.title}}</text> <!-- 标题 -->
+        <text class="knowledge_details">{{item.details}}</text> <!-- 简介 -->
+      </view>
+    </navigator>
+    
+
+  </view>
+
+  
+</view>

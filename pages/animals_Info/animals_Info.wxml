@@ -1,5 +1,7 @@
 <!-- pages/animals_Info/animals_Info.wxml
 <text>pages/animals_Info/animals_Info.wxml</text>  -->
+
+<view class="full-screen-background"></view> 
 <view class="animal-info">  
   <image src="{{animal.url}}" mode="aspectFit" class="animal-photo" bindload="imageLoaded" binderror="imageError"></image>  
   <view class="info-group">  
@@ -48,30 +50,79 @@
     <text class="info-label">点赞数:</text>  
     <text class="info-value">{{animal.likes}}</text>  
   </view>  
-  <view class="container">  
-  <button bindtap="handleLike" class="{{isLiked ? 'liked' : 'unliked'}}">  
-    {{isLiked ? '已点赞' : '点赞'}}  
-  </button>  
+
+  <view class="button-container">  
+  <view class="like-button" bindtap="handleLike">  
+    <image src="{{isLiked ? 'cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/小图标合集/点赞 (1).png' : 'cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/小图标合集/点赞.png'}}" class="like-image" />  
+    <text class="like-text">{{isLiked ? '已点赞' : '点赞'}}</text>  
+  </view>  
+    
+  <view class="image-button" bindtap="go">  
+    <image class="image-button__icon" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/小图标合集/勋章奖牌奖章.png" mode="aspectFit" />  
+    <text class="image-button__text">排行榜</text>  
+  </view>  
+
+  <view class="image-button" bindtap="getfood">  
+    <image class="image-button__icon" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/小图标合集/猫粮盆.png" mode="aspectFit" />  
+    <text class="image-button__text">投喂</text>  
+  </view>  
 </view>
+
 <!--评论-->
 <!--留言板实现-->
 <view class='top'>
             <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
                 <text class="{{currentTabsIndex==index?'on':''}}">精彩评论</text>
             </view>
-</view>
-
-
-<block wx:for="{{animal.comment}}}" wx:key="id">
- <view>
- <text>{{item.name}}:</text>
- <text>{{item.content}}</text>
- </view>   
-</block>
-
-
+    </view>
+  <view class='newsBox'>
+    <view  wx:for="{{comments}}" wx:key="date">
+      <view class='container-content'>
+          <view class='user-info'>
+            <view class='user-name-time'>
+              <view class='user-name'>{{item.name}}:</view>
+              <view class='user-publish-time'>{{item.date}}</view>
+            </view>
+            </view>
+            <view class='content'>
+            <!-- 显示文本 -->
+              <view style="display:flex;flex-direction:column">
+                <text class='content-text'>{{item.content}}</text>
+              </view>
+             </view>
+            </view>
+    </view>
+    </view>
+<!--发表评论的输入框-->
 <view class="talk">
-    <input class='input' type='text' value='' confirm-type='send' placeholder='发表评论！' bindinput='talkInput' value='{{inputValue}}'></input>
-    <button  class="confirm"  bindtap="submit">确定</button>
+    <input class='input' type='text' value='' confirm-type='send' placeholder='发表评论！' bindinput='talkInput' value='{{animalcontent}}'></input>
+    <button  class="confirm" type="primary"  bindtap="submit">确定</button>
 </view>
+
+<!--照片册显示-->
+<view class='top'>
+            <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
+                <text class="{{currentTabsIndex==index?'on':''}}">照片册</text>
+            </view>
+    </view>
+    <!--上传照片按钮-->
+    <view class="container">  
+  <button bindtap="uploadPicture" class="uploadpic">上传照片</button>  
+</view>
+  <view class='newsBox'>
+    <view  wx:for="{{pictures}}" wx:key="time">
+      <view class='container-content'>
+          <view class='user-info'>
+            <view class='user-name-time'>
+              <view class='user-name'>{{item.uploader}}</view>
+        <view class='user-publish-time'>于{{item.time}}上传</view>
+            </view>
+            </view>
+            <view class='content'>
+            <!-- 显示图片 -->              
+               <image src="{{item.imageUrl}}"></image>  
+             </view>
+            </view>
+    </view>
+    </view>
 </view>

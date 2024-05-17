@@ -1,2 +1,81 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<view class="title">   <!--标题地大喵汪星球-->
+  <text style="color: rgb(253, 89, 89); font-size: 200%; text-align: center;">
+  欢迎来到地大喵汪星球！
+  </text>
+</view>
+<view class="Productionteam">   
+
+  <view style="margin-bottom: 10px">
+    <view class="ani"> 
+   <text style="color: rgb(65, 65, 65); font-size: 120%; text-align: center;"> 
+  本程序由：
+  </text>
+  <text style="color: rgb(235, 110, 27); font-size: 120%; text-align: center;"> 
+  代码总是写不对队
+</text>
+  <text style="color: rgb(65, 65, 65); font-size: 120%; text-align: center;"> 
+  友情制作！
+</text>  
+    </view>
+  </view>
+
+  <view style="margin-bottom: 10px">
+    <view class="ani"> 
+<text style="color: rgb(65, 65, 65); font-size: 120%; text-align: center;margin-top: 90px;"> 
+  特别鸣谢：
+</text>
+  <text style="color: rgb(235, 110, 27); font-size: 120%; text-align: center;"> 
+  爱不流浪协会
+</text>
+<text style="color: rgb(65, 65, 65); font-size: 120%; text-align: center;"> 
+  以及众多爱猫/爱狗人士的友情支持！
+</text>
+</view>
+  </view>
+  <view style="margin-bottom: 10px">
+    <view class="ani"> 
+<text style="color: rgb(65, 65, 65); font-size: 120%; text-align: center;"> 
+  宣传一下（打个广告）：
+</text>
+<text style="color: rgba(65, 65, 65, 0.671); font-size: 100%; text-align: center;"> 
+  “爱不流浪协会”是中国地质大学（武汉）正式社团，纯公益组织。
+  协会遵循学校一贯坚持的“谋求人与自然和谐发展”的价值观，倡导“科学理性救助、领养代替购买、绝育代替捕杀”。为校园流浪动物的生存提供基本的帮助，积极协调人与流浪动物之间的关系。
+  </text>
+  <text style="color: rgb(0, 120, 215); font-size: 14px; text-decoration: underline;"> 
+  欢迎关注微信公众号“CUG爱不流浪”
+  以及官方QQ群644133392
+  了解更多相关信息！
+  </text>
+</view>
+  </view>
+
+  <view style="margin-bottom: 10px">
+  <view class="ani"> 
+  <text style="color: rgb(80, 80, 80); font-size: 120%; text-align: center;"> 
+  开发者团队成员（排名不分先后）：
+  </text>
+  <view class="member">
+    <image src="/iconfont/我的_选中.png" class="member1-1"></image>
+    <text style="color: rgb(160, 130, 85);font-size: 150%;text-align: center;">何晓棠</text>
+  </view>
+  <view class="member">
+    <image src="/iconfont/我的_选中.png" class="member1-1"></image>
+    <text style="color: rgb(160, 130, 85);font-size: 150%;text-align: center;">康楠</text>
+  </view>
+  <view class="member">
+    <image src="/iconfont/我的_选中.png" class="member1-1"></image>
+    <text style="color: rgb(160, 130, 85);font-size: 150%;text-align: center;">张董浩</text>
+  </view>
+  <view class="member">
+    <image src="/iconfont/我的_选中.png" class="member1-1"></image>
+    <text style="color: rgb(160, 130, 85);font-size: 150%;text-align: center;">李帛</text>
+  </view>
+  <text style="color: rgb(0, 120, 215); font-size: 14px; text-decoration: underline;"> 
+  可通过以下方式联系开发者团队：
+  QQ：XXXXXXXX
+  </text>
+</view>
+</view>
+
+</view>

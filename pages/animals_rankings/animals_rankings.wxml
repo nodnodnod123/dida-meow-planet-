@@ -1,0 +1,27 @@
+<!--pages/animals_rankings/animals_rankings.wxml-->
+
+<view class="container">
+<view class="ranktext">
+<image src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/小标件图片/小图标合集/排行榜.png"></image>
+</view>
+  <view wx:for="{{dataList}}" wx:key="item" class="rank_block">
+    <navigator url="/pages/animals_Info/animals_Info?id={{item._id}}" open-type="navigate">
+    <view class="rank-item">
+      <!--头像-->
+      <view class="rank-img">
+        <image src="{{item.url}}"></image>
+      </view>
+      <!--展示昵称,以及贡献值-->
+      <block>
+        <view class="rank-name">{{item.name}}</view>
+        <view class="rank-price">点赞量：{{item.likes}}次</view>
+      </block>
+      <!--排名-->
+      <view class="rank-uv">
+        <text wx:if="{{item.rank>3}}">第 {{item.rank}} 名</text>
+        <image src="/images/rank{{item.rank}}.png" wx:if="{{item.rank<=3}}" />
+      </view>
+    </view>
+  </navigator>
+  </view>
+</view>

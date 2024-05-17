@@ -1,16 +1,17 @@
 /* pages/forum/post/post.wxss */
 .container {
-  height: 100vh; /* 设置容器高度为屏幕高度 */
+  height: 90vh; 
   display: flex;
   flex-direction: column;
 }
 
 .post-container {
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
 
   .post-title {
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: bold;
   }
 
   .post-content {
@@ -19,18 +20,6 @@
     line-height: 1.5; // 设置行高为 1.5 倍
   }
 
-  .like-button {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: #007bff;
-    color: white;
-    font-size: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
 }
 .comment-container {
   height: 70%;
@@ -71,3 +60,160 @@ border-radius: 25rpx
   box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
 }
 
+.like-button {  
+  display: flex;  
+  flex-direction: column; /* 设置为列方向，使子元素垂直堆叠 */  
+  align-items: center; /* 垂直居中 */  
+
+  /* 其他你想要的样式 */  
+}  
+  
+.like-image {  
+  margin-left: 10px;
+  width: 30px; /* 或者你想要的宽度 */  
+  height: 30px; /* 或者你想要的高度 */  
+  margin-right: 10px; /* 图片和文字之间的间距 */  
+
+}  /*分割线样式*/
+.divLine{
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+  margin: 30rpx 0;
+}
+
+.others_container {
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+  padding-bottom: 20rpx;
+}
+
+.likes image {
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.likes_title {
+  font-size: 25rpx;
+}
+
+
+.Read_original_essay {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.comments_container {
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.comments_container input {
+  height: 100%;
+  border: 5rpx solid #ff6e5a;
+  padding-left: 12rpx;
+} 
+
+.comments_container .comments_submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160rpx;
+  font-size: 30rpx;
+  background-color: #ff6e5a;
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  background-color: #fff;
+  border-bottom: solid 1px #efefef;
+  margin-top:20px;
+}
+
+.top-item {
+  line-height: 80rpx;
+  flex: 1;
+  text-align: center;
+  font-family: PingFangSC-Regular;
+  font-size: 30px;
+  color: #666;
+  padding: 0 20rpx;
+}
+
+.top-item text {
+  display: inline-block;
+  line-height: 80rpx;
+  flex: 1;
+  text-align: center;
+  font-family: PingFangSC-Regular;
+  font-size: 30rpx;
+  color: #666;
+  padding: 0 20rpx;
+}
+.container-content{ 
+  border-bottom: 2px solid gainsboro;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin: 20rpx 20rpx 0 20rpx;
+}
+
+.user-head {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.user-name-time {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.user-name {
+  font-size: 24rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.user-publish-time {
+  font-size: 20rpx;
+  color: #999;
+}
+.content {
+  display: flex;
+  margin: 20rpx 10rpx;
+  flex-direction: column;
+  margin-top:20rpx;
+  width: 85%;
+}
+
+.content-scroll {
+  width: 100%;
+}
+
+.content-text {
+  font-size: 30rpx;
+  color: #666;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+-webkit-line-clamp: 10;
+-webkit-box-orient: vertical;
+margin: 20rpx 0 0 40rpx;
+}

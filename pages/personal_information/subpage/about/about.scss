@@ -1,1 +1,35 @@
 /* pages/about/about.wxss */
+.title{      /*标题视图*/
+  height: 200rpx;     /*边框高度*/
+  width: 100%;
+  margin-left: 2%;       /*视图框与左边界距离*/
+  background-color: #ffffff;    /*视图背景颜色*/
+  border-radius: 25rpx;
+}
+.Productionteam{    /*制作组*/
+  height: 2000rpx;     /*边框高度*/
+  width: 100%;
+  margin-left: 0%;       /*视图框与左边界距离*/
+  background-color: #ffffff;    /*视图背景颜色*/
+  border-radius: 25rpx;
+}
+.member{     /*成员1*/
+  height:100rpx;
+  width: 100%;
+}
+.member1-1{   /*成员1头像*/
+  margin-left: 20px;       /*视图框与左边界距离*/
+  width: 40px;
+  height: 40px;
+}
+.ani {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* 设置阴影效果 */
+  background: linear-gradient(to right, #66cfff2a, #e4e8ff);  /* 设置渐变背景 */
+  background-color: #76cee917;  /* 设置背景色 */
+  border: 1px solid rgb(243, 161, 161);  /* 设置边框 */
+  border-radius: 5px;  /* 设置边框圆角 */
+  padding: 7px;  /* 设置内边距 */
+  margin: 7px;  /* 设置外边距 */
+  overflow: hidden; /* 让内容溢出时隐藏，防止影响其他组件 */
+  width: calc(90% - 14px); /* 让组件宽度为父容器的，减去外边距的两倍 */
+}

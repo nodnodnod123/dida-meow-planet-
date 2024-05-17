@@ -1,0 +1,44 @@
+/* pages/personal_information/subpage/feedback/feedback.wxss */
+
+.title2{
+margin-top: 30rpx;    /*视图与上一视图间距*/
+height: 20px;      /*边框高度*/
+width: 80%;
+padding: 10rpx;
+margin-left: 50rpx;       /*视图框与左边界距离*/
+border: 1rpx solid rgb(235, 169, 205);    /*边框颜色*/
+border-radius: 25rpx
+
+}
+.content2{
+  margin-top: 30rpx;    /*视图与上一视图间距*/
+height: 100px;      /*边框高度*/
+width: 80%;
+padding: 10rpx;
+margin-left: 50rpx;       /*视图框与左边界距离*/
+border: 1rpx solid rgb(235, 169, 205);    /*边框颜色*/
+border-radius: 25rpx
+}
+.submit1{
+  height: 4ch;
+  width: 4ch;
+  background-color: #f5f8e5;
+  margin-top: 20rpx;    /*视图与上一视图间距*/
+}
+
+//反馈展示区
+.feedback-list {
+  margin-top: 20rpx;    /*视图与上一视图间距*/
+}
+.feedback-item {
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.feedback-title {
+  font-weight: bold;
+  word-break:break-all;
+}
+.feedback-content {
+  margin-top: 5px;
+}
