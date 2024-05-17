@@ -1,17 +1,36 @@
+<view class="title"> 
+  <view class="title_content">喵汪论坛</view>
+</view>
+
 <view class="container">
-  <view class="search-container">
+  <view class="position">
+    <view class="search-container">
     <view class="search-left">
-     <view class="iconfont icon-sousuo"></view>
-      <input type="text" placeholder=" 快来搜索感兴趣的帖子叭~"/>
+      <input bindinput="search" type="text" placeholder=" 快来搜索感兴趣的帖子叭~"/> 
       <button>搜索</button>
     </view>
+  </view> 
+
+  <view class="publish" bindtap="goto_publish"> 
+      <view class="publish_content">发布帖子</view> 
   </view>
-  <view>
-    <block wx:for="{{posts}}" wx:key="postId">
-      <view wx:key="postId" class="post">
-        <text>{{item.title}}</text>
-        <button bindtap="gotoPostDetail" data-post-id="{{item._id}}">查看详情</button>
+  </view>
+ 
+  <view> 
+
+    <view class="post_list" wx:for="{{posts}}" wx:key="postId"> 
+      <view class="post" bindtap="gotoPostDetail" data-post-id="{{item._id}}"> 
+        <image src="{{item.picture}}" mode="aspectFit"/> 
+        <view class="post_discription"> 
+          <text class="post_title">{{item.title}}</text>
+          <text class="post_brief">{{item.Brief}}</text>
+   
+     <text class="post_likes">点赞量：{{item.up}}</text>  
+        </view> 
       </view>
-    </block>
+    </view>
+ 
+
   </view>
+ 
 </view>

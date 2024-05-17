@@ -1,4 +1,4 @@
-// pages/Developer-Info/Developer-Info.js
+// pages/animals_Info/animals_feeding/animals_feeding.js
 Page({
 
   /**

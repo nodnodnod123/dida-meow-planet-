@@ -1,9 +1,69 @@
+
+<!-- 所有控件都设置在 container 之内 -->
+
 <view class="container">
+  <view wx:if="{{advertising}}">
+  <button class="cu-btn round bg-blue" bindtap="jmp" style="position: fixed; z-index: 1; width: 280rpx; height: 64rpx;  left: 400rpx; top: 43rpx">跳过广告{{time}}s</button>
+  <image src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/开屏图片_375x655.jpg" style="width: 100%;height:100vh;position:fixed;"/>
+</view>
+<view wx:else>
+<!--页面内容-->
+  <!-- 搜索框 -->
   <view class="search-container">
-  <view class="search-left">
-    <view class="iconfont icon-sousuo"></view>
-    <input type="text" placeholder=" 快来搜索喜欢的小猫小狗叭~"/>
-    <button>搜索</button>
+    <view class="search-left">
+      <view class="iconfont icon-sousuo"></view>
+      <input type="text" placeholder="快来搜索喜欢的小猫小狗叭~" bindinput="search"/>
+       <!-- <button>搜索</button>  -->
+    </view>
+  </view>
+  <view>
+  <swiper interval="2000" indicator-dots="true" autoplay="true" circular="true">
+    <swiper-item>
+      <image mode="widthFix" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/首页轮播图/logo.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="widthFix" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/首页轮播图/CUG小动物协会_1700x1100.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="widthFix" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/首页轮播图/1.jpg"></image>
+    </swiper-item>
+    <swiper-item class="cri"> 
+      <image mode="widthFix" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/首页轮播图/2.jpg"></image>
+    </swiper-item>
+      <swiper-item>
+        <image mode="widthFix" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/首页轮播图/3.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+      <image mode="widthFix" src="cloud://cloud1-9g18gtfz73103b12.636c-cloud1-9g18gtfz73103b12-1325231975/首页轮播图/4.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>
+  <view class="button-container">
+    <button type="primary" bindtap="AllArea" class="small-button orange-button">全部</button>
+    <button type="primary" bindtap="WestArea" class="small-button orange-button">南望山西区</button>
+    <button type="primary" bindtap="NorthArea" class="small-button orange-button">南望山北区</button>
+    <button type="primary" bindtap="EastArea" class="small-button orange-button">南望山东区</button>
+    <button type="primary" bindtap="FutureArea" class="small-button orange-button">未来城校区</button>
+  </view>
+
+  <!-- 小动物信息：照片+简介 -->
+  <view wx:for="{{items}}" wx:key="id" style="margin-bottom: 10px">
+    <view class="ani">
+      <navigator url="/pages/animals_Info/animals_Info?id={{item._id}}" open-type="navigate">
+        <!-- navigator实现点击改view组件跳转页面 -->
+        <image src="{{item.url}}" mode="aspectFull" bindload="imageLoaded" binderror="imageError"></image>  
+        <view>
+          <text class="my-text">姓名：{{item.name}}</text> 
+        </view>
+        <view>
+          <text class="my-text">性格：{{item.character}}</text>
+        </view>
+        <view>
+          <text class="my-text">其他信息：{{item.else}}</text> 
+        </view>
+        <!-- 根据你的数据结构展示其他字段 -->  
+      </navigator>
+    </view>
   </view>
 </view>
 </view>

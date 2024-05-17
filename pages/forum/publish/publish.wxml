@@ -1,0 +1,17 @@
+  <!-- post/post.wxml -->  
+  <view class="container">  
+    <view class="publish_title">
+      <view class="publish_title_content">发布帖子</view>
+    </view>
+    <view class="content-area"> 
+      <textarea class="title" placeholder="请输入标题" bindinput="bindTitleInput" value="{{title}}"></textarea>  
+
+      <textarea class="brief" value="{{brief}}" placeholder="请输入简介" bindinput="bindBriefInput"></textarea>  
+
+      <textarea placeholder="请输入内容" 	maxlength="-1" bindinput="bindContentInput" value="{{content}}"></textarea>  
+
+      <button bindtap="chooseImage" class="post_piscure_btn">上传图片</button>
+
+      <button bindtap="submitPost" class="submit-btn">提交</button>  
+    </view>
+  </view>

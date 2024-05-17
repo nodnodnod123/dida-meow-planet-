@@ -1,0 +1,33 @@
+<!--pages/personal_information/subpage/feedback/feedback.wxml-->
+<text style="color: rgb(160, 130, 85);font-size: 250%;">
+  问题反馈
+  </text>
+
+<view class='title1'>
+  <input class='title2' placeholder="请输入反馈标题：" bindinput='title' value="{{title_value}}"></input>
+</view>
+
+<view class='content1'>
+  <input class='content2' placeholder="请输入具体内容："  bindinput='content' value="{{content_value}}"></input>
+</view>
+
+<!--反馈提交-->
+<button class='submit1' id='submit' bindtap='submit'>
+    提交
+</button>
+
+<!-- 反馈展示区域 -->
+<text style="color: rgb(160, 130, 85);font-size: 150%;">反馈留言板：</text>
+
+<view class='feedback-list'>
+  <block wx:for="{{feedbacks}}" wx:key="*this">
+    <view class='feedback-item'>
+      <view>
+        <text class='feedback-title'>{{item.title}}</text>
+      </view>
+      <view>
+        <text class='feedback-content'>{{item.content}}</text>
+      </view>
+    </view>
+  </block>
+</view>

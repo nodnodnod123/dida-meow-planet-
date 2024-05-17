@@ -1,0 +1,88 @@
+/* pages/animals_rankings/animals_rankings.wxss */
+page {
+  background-color: #bc9deb27;
+}
+.container {
+  width: 100%;
+  margin-bottom: 80rpx;
+  margin-top: 10rpx;
+}
+.ranktext{
+  display: flex;  
+  height: 60px;
+  flex-direction: column; /* 垂直堆叠图片和文字（如果需要的话） */  
+  align-items: center; /* 垂直居中 */  
+  margin-left: 20px;
+}
+
+.rank-item {
+height: 200rpx;
+width: 750rpx;
+background:#60a8e00e;
+margin-bottom: 8rpx;
+padding: 20rpx 20rpx 20rpx 50rpx;
+box-sizing: border-box;
+position: relative;
+}
+.rank-item .rank-img {
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  margin-right: 50rpx;
+  position: relative;
+}
+
+.rank-item .rank-img image {
+  position: absolute;
+  border-radius: 50%;
+  width: 140rpx;
+  height: 140rpx;
+  top: 0;
+  left: 0;
+}
+
+.rank-item .rank-name {
+  font-size: 32rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #4e5b65;
+  font-weight: bold;
+}
+
+.rank-item .rank-full {
+  font-size: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #4e5b65;
+}
+
+.rank-item .rank-price {
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #d55a4a;
+}
+
+.rank-item .rank-uv text {
+  font-size: 38rpx;
+  position: absolute;
+  height: 100rpx;
+  line-height: 100rpx;
+  bottom: 20rpx;
+  right: 20rpx;
+  color: #777;
+}
+
+.rank-item .rank-uv image {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+
+.rank_block{
+  margin-top: 10rpx;
+}
+

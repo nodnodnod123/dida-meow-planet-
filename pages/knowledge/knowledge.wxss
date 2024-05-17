@@ -1,1 +1,102 @@
-/* pages/knowledge/knowledge.wxss */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+ 
+/* 搜索框 */
+.search-left input{
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing:content-box;
+  margin-left: 15rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  height: 30rpx;
+  width: 453rpx;
+}
+.search-left button {
+  display: inline-block;
+  height: 35rpx;
+  width: 80rpx;
+  line-height: 35rpx;
+  border-radius: 40rpx;
+  background-color: #ff6e5a;
+  color: white;
+  box-sizing:content-box;
+  vertical-align: middle;
+}
+
+.search-left .iconfont {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30rpx;
+}
+
+/* 独家资料 */
+.knowledge-label {
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: gray;
+  vertical-align: middle;
+  text-align: center;
+  margin: 20rpx 10rpx;
+  margin-bottom: 10rpx;
+  border-radius: 80rpx;
+  background-image: url('https://img.shetu66.com/2023/04/12/1681270451763337.jpg');
+}
+
+.knowledge-label text {
+  color: #eee;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.knowledge-list {
+  align-items: center; /* 垂直居中 */  
+  padding: 10px;  
+  background-color: #f1f1f1;  
+}
+
+.knowledge-list .knowledge {
+  display: flex;  
+  justify-content: space-between; /* 分散子元素 */  
+  align-items: center; /* 子元素顶部对齐 */  
+  width: 100%; 
+  height: 250rpx;
+  background-color: #ffffff;
+  border-radius: 50rpx;
+}
+
+.knowledge  image {
+  width: 250rpx; /* 根据图片大小和需要调整宽度 */  
+  height: 250rpx; /* 根据图片大小和需要调整高度 */  
+  margin-right: 20px; /* 图片与右边界的间距 */ 
+  margin-left: 30rpx;
+  border-radius: 50rpx;
+}
+
+.knowledge_discription {
+  width: 100%;
+}
+
+.knowledge-list .knowledge_title {
+  display: block;
+  font-size: 30rpx;  
+  font-weight: bold;  
+  margin-bottom: 10rpx;
+}
+
+.knowledge-list .knowledge_details {
+  display: block;
+  font-size:25rpx;  
+  color: #666;
+}
+
+
+
+
+
+

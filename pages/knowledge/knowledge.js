@@ -1,18 +1,57 @@
 // pages/knowledge/knowledge.js
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    items:[]
+  },
+ 
+  search(e){
+    const db = wx.cloud.database(); 
+    const _=db.command;
+    console.log("当前输入"+e.detail.value);
+    let m=e.detail.value
+    db.collection('essays').where(_.or([
+      {
+        title:db.RegExp({
+          regexp: m,
+          options: 'i',
+        })
+      },
+      {
+        details:db.RegExp({
+          regexp: m,
+          options: 'i',
+      })
+    },
+    {
+      else:db.RegExp({
+        regexp: m,
+        options: 'i',
+    })
+  }
+    ])).get().then(res=>{
+      console.log(res.data);
+      this.setData({
+        items:res.data
+      })
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  onLoad : function (options) {
+    const db = wx.cloud.database();  
+    db.collection('essays').get({
+      success: res => {
+        console.log(res.data);
+        this.setData({
+          items:res.data
+        })
+      },
+      fail: err => {  
+        console.log("错误");
+        console.error(err);
+      }  
+    }) 
   },
 
   /**

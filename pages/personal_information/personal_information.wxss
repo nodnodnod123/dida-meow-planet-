@@ -19,15 +19,23 @@
   align-items: center;
   height: 128rpx;
   margin-left: 40rpx;
-  color: rgb(255, 255, 255);
+  color: #000000;
 }
 
-.userinfo-avatar {   /*用户头像*/
-  overflow: hidden;
+.avatar-wrapper {   /*用户头像按钮*/
+  background-color: #def1c3;
   width: 150rpx;        /*头像球宽度*/
   height: 150rpx;       /*头像球高度*/
-  margin: 60rpx;
-  border-radius: 50%;
+  border-radius: 100%;
+}
+.avatar{     /*用户头像图片*/
+  width: 130rpx;        /*头像球宽度*/
+  height: 130rpx;       /*头像球高度*/
+  border-radius: 100%;
+}
+.weuiinput{    /*用户昵称*/
+  width: 200rpx;
+  height: 50rpx;
 }
 
 .partTwo{
@@ -37,7 +45,7 @@
   margin-top: -30rpx;    /*视图与上一视图间距*/
   background-color: #e5fcf8;    /*视图背景颜色*/
   border: 1rpx solid rgb(150, 150, 150);    /*边框颜色*/
-  border-radius: 25rpx;
+  border-radius: 25rpx;    /*边框锐度*/
 }
 
 .identity{     /*我的身份*/
@@ -119,11 +127,18 @@
   text-align: justify;
 }
 
-.about1{
+.about1{         /*了解地大喵汪星球*/
   height:100rpx;
   width:200%;
   margin-left: -32rpx;       /*视图框与左边界距离*/
   margin-top: 50rpx;    /*视图与上一视图间距*/
   border: 1rpx solid rgb(235, 169, 205);    /*边框颜色*/
   background-color: #ffcde2;    /*视图背景颜色*/
+}
+
+.feedback1{      /*反馈按钮*/
+  height: 4ch;
+  width: 4ch;
+  background-color: #def1c3;
+  margin-top: 10rpx;    /*视图与上一视图间距*/
 }

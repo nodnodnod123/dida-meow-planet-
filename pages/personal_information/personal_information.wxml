@@ -1,14 +1,14 @@
+
 <view class='container'>
   <!--头像名称-->
   <view class="partOne">   <!--第一部分-->
     <view class="userinfo">   <!--用户信息-->
-
-      <view class="userinfo-avatar">
-        <!--展示微信用户头像，不再返回，展示灰色头像-->
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <!--展示微信用户名称，不再返回，显示微信用户-->
-      <open-data type="userNickName"></open-data>
+      <!--获取用户头像-->
+      <button class="avatar-wrapper" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar" >
+        <image class="avatar" src="{{avatarUrl}}"></image>
+      </button>
+      <!--获取用户名称-->
+      <input type="nickname" class="weuiinput" placeholder="微信用户" bindblur="changeNickName"/>
 
     </view>
   </view>
@@ -40,7 +40,7 @@
     </view>
     <view class="Undetermined4">
       <button class="Modifyphoto1" id="Modifyphoto2" bindtap="Modifyphoto">
-        修改我的信息
+        申请成为管理员
       </button>
     </view>
   </view>
@@ -49,4 +49,11 @@
   <button class="about1" id="about2" bindtap="about">
     了解喵汪星球
   </button>
+
+    <!--反馈功能-->
+  <button class='feedback1' id="feedback2" bindtap="feedback">
+    反馈
+  </button>
+
 </view>
+

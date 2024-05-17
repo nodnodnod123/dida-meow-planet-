@@ -1,56 +1,137 @@
 /* pages/forum/forum.wxss */
-.container {
-  width: 100vw;
-  height: 100vh;
-  background-color: #eee;
-  padding: 15rpx 20rpx;
-}
 
-.search-container{
+.title {    
   display: flex;
-  justify-content: space-between;
+  justify-content: center;  
   align-items: center;
-  padding: 10rpx 20rpx;
-  box-sizing: border-box;
-  background-color: white;
-  border-radius: 40rpx;
-  margin-right: 50rpx;
-}
+  width: 100%;  
+  height: 200rpx;  
+  background-color: #be771a6c;  
+} 
+ 
+.title_content {   
+  font-size: 70rpx; 
+  font-style: italic;  
+  font-weight: bold; 
+  text-align: center; 
+  color: #ff6e5a; 
+} 
+  
+.container {  
+  width: 100vw; 
+  height: 100vh;   
+  background-color: #eee; 
+  padding: 15rpx 20rpx;  
+} 
+ 
+.position {   
+  position: sticky; 
+  top: 0;  
+} 
 
-.search-left input{
-  display: inline-block;
-  vertical-align: middle;
-  box-sizing:content-box;
-  padding-top: 10rpx;
-  padding-bottom: 10rpx;
-  height: 30rpx;
-  width: 453rpx;
-}
-.search-left button {
-  display: inline-block;
-  height: 35rpx;
-  width: 80rpx;
-  line-height: 35rpx;
-  border-radius: 40rpx;
+.search-container{ 
+  display: flex;  
+  justify-content: space-between; 
+  align-items: center;  
+  padding: 10rpx 20rpx;  
+  box-sizing: border-box;  
+  background-color: white; 
+  border-radius: 40rpx;   
+  margin-right: 50rpx;  
+} 
+
+.search-left input{   
+  display: inline-block; 
+  vertical-align: middle; 
+  box-sizing:content-box; 
+  padding-top: 10rpx;  
+  padding-bottom: 10rpx; 
+  padding-right: 15rpx;
+  height: 30rpx; 
+  width: 453rpx; 
+} 
+.search-left button { 
+  display: inline-block;  
+  height: 35rpx; 
+  width: 80rpx; 
+  line-height: 35rpx; 
+  border-radius: 40rpx;  
   background-color: #ff6e5a;
-  color: white;
-  box-sizing:content-box;
-  vertical-align: middle;
+  color: white; 
+  box-sizing:content-box; 
+  vertical-align: middle;  
 }
 
-.search-left .iconfont {
-  display: inline-block;
-  vertical-align: middle;
+.search-left .iconfont { 
+  display: inline-block;  
+  vertical-align: middle;  
+}
+ 
+.publish { 
+  width:700rpx; 
+  height: 110rpx;  
+  display: flex; 
+  justify-content: center;  
+  align-items: center;  
+  background-color: #eb7272; 
+  border-radius: 20rpx;   
+  margin-top: 20rpx;
+}
+ 
+.publish_content {  
+  font-size: 50rpx;  
+}  
+
+.post_list { 
+  align-items: center; /* 垂直居中 */     
+  padding: 10px;     
+  background-color: #f1f1f1;   
+} 
+ 
+.post { 
+  display: flex;  
+  justify-content: space-between; /* 分散子元 素 */     
+  align-items: center; /* 子元素顶部对齐 */   
+  width: 100%;  
+  height: 250rpx; 
+  background-color: #ffffff;  
+  border-radius: 50rpx;  
 }
 
-.post {
-  width: calc(90%); /* 设置容器宽度为屏幕宽度90% */
-  border: 5px solid rgb(233, 189, 189); /* 边框样式 */
-  padding: 20px; /* 内边距 */
+.post  image {  
+  width: 250rpx; /* 根据图片大小和需要调整宽度 */    
+  height: 250rpx; /* 根据图片大小和需要调整高度 */   
+  margin-right: 20px; /* 图片与右边界的间距 */  
+  margin-left: 30rpx;  
+  border-radius: 50rpx;  
+}
+ 
+.post_discription { 
+  width: 100%;  
+} 
+
+.post_title {  
+  display: block; 
+  font-size: 35rpx;   
+  font-weight: bold;    
+  margin-bottom: 10rpx; 
+}  
+
+.post_brief {  
+  display: block;  
+  font-size:25rpx;   
+  color: #666;  
+}
+.post-item {  
+  display: flex; /* 使用 flexbox 布局将文本和图片放在同一行 */  
+  align-items: center; /* 垂直居中 */  
+}  
+  
+.post_likes {  
+  /* 根据需要设置文本样式 */  
+  font-size:24rpx; 
+  margin-left: 124px; /* 间距 */  
   margin-top: 5px;
-  margin-bottom: 10px; /* 底部外边距，用于与下一个帖子隔开 */
-  border-radius: 8px; /* 圆角半径 */
-  text-align: center; /* 文本居中对齐 */
-}
-
-
+  color:  #ff6e5a;  
+}  
+  

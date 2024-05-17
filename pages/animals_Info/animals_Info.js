@@ -1,5 +1,6 @@
 // pages/animals_Info/animals_Info.js
 let pinglun={}
+let newpics={}
 Page({
   data: {
     userInfo:null,//用户信息
@@ -11,14 +12,14 @@ Page({
   },
   onLoad: function (options) {
     console.log(options.id);  //可以打印一下option查看参数
-    /////////////////////评论////////////////
     var that = this;
     const db = wx.cloud.database();
-    db.collection('animals').doc(options.id).get({//评论信息
+    db.collection('animals').doc(options.id).get({//评论信息和照片册信息
       success: res => {
         let comments = []; // 创建一个空数组来存储评论信息  
+        let pictures = []; // 创建一个空数组来存储照片信息  
+        if(res.data.comment.length>0){
         console.log(res.data.comment.length)//评论条数
-        // 遍历当前动物的每个评论  
         for (let j = res.data.comment.length - 1; j >= 0; j--) {  
           const comment = res.data.comment[j]; // 当前遍历到的评论对象  
           console.log(comment.content)//评论
@@ -28,11 +29,28 @@ Page({
           date:comment.date 
           });  
         }  
-        that.setData({  
-          comments: comments  
-        }); 
+        
+        }
+       if(res.data.pictures.length>0){
+        console.log(res.data.pictures.length)//照片个数
+         // 遍历当前动物的每个照片
+        for (let j = res.data.pictures.length - 1; j >= 0; j--) {  
+          const picture = res.data.pictures[j]; // 
+          pictures.push({ //  
+         uploader: picture.uploader, // 
+          imageUrl: picture.imageUrl,// 
+          time:picture.time
+          });  
+        }  
+      
+      }
+      that.setData({  
+        comments: comments ,
+        pictures:pictures
+      }); 
         }
     })
+
     ///////////////////////////
     if(options.id){
       const db = wx.cloud.database();
@@ -51,6 +69,17 @@ Page({
   　  // 获取传递过来的 id    
   }
 },  
+go: function() {
+  wx.navigateTo({
+      url:'/pages/animals_rankings/animals_rankings'
+  })
+},
+getfood: function() {
+  console.log("投喂页面");
+  wx.navigateTo({
+      url:'/pages/animals_Info/animals_feeding/animals_feeding'
+  })
+},
 // 点赞函数 ------------------------
 handleLike: function() {  
   const db = wx.cloud.database(); // 调用数据库  
@@ -127,6 +156,87 @@ handleLike: function() {
 talkInput:function(event){
 this.data.animalcontent=event.detail.value;
 },
+// 上传图片到云存储并保存到云数据库  
+async uploadPicture() {  
+  try {  
+    const res = await wx.chooseImage({  
+      count: 1, // 默认9，这里选择一张图片  
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有  
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有  
+    });  
+    const tempFilePaths = res.tempFilePaths;  
+    // 上传图片到云存储  
+    const cloudPath = 'images/' + new Date().getTime() + '.png'; // 设置云存储路径  
+    const uploadResult = await wx.cloud.uploadFile({  
+      cloudPath,  
+      filePath: tempFilePaths[0], // 小程序临时文件路径  
+    });  
+    const fileID = uploadResult.fileID // 获取上传后返回的文件ID  
+    const animalId = this.data.animalId // 替换成实际的小动物ID  
+    // 获取当前时间  
+let date
+let yy = new Date().getFullYear()
+let mm = new Date().getMonth()+1
+let dd = new Date().getDate()
+let hh = new Date().getHours()
+let mf = new Date().getMinutes()<10?'0'+new Date().getMinutes():
+  new Date().getMinutes()
+let ss = new Date().getSeconds()<10?'0'+new Date().getSeconds():
+  new Date().getSeconds()
+  date = `${yy}-${mm}-${dd} ${hh}:${mf}:${ss}`;
+   // const time = new Date().toISOString() 
+    // 构建要追加到 pictures 数组中的对象  
+    let pictureObject = {}
+    pictureObject. imageUrl=fileID 
+    pictureObject.uploader= '未知名铲屎官'
+    pictureObject.time=date
+    newpics=this.data.animal.pictures
+    // 如果 newpics 还不存在或者不是数组，则初始化为空数组  
+if (!Array.isArray(newpics)) {  
+  newpics = [];  
+}  
+    newpics.push(pictureObject)
+    var that =this;
+    const db = wx.cloud.database()// 调用数据库  
+    // 将新图片对象追加到对应小动物的 pictures 数组中  
+    db.collection('animals').doc(animalId).update({  
+      data: {     
+        pictures:newpics
+      },  
+    })
+  .then(res => {  
+    // 更新成功，更新页面状态  
+   let newpics2 = []; //  
+   console.log(newpics.length)//条数
+   // 
+   for (let j = newpics.length - 1; j >= 0; j--) {  
+     const newpics22 = newpics[j]; // 
+     newpics2.push({ //  
+      imageUrl: newpics22.imageUrl, //   
+     uploader: newpics22.uploader,// 
+     time:newpics22.time 
+     });  
+    }
+   that.setData({
+     pictures:newpics2
+   })
+  })
+   // 更新成功提示  
+   wx.showToast({  
+    title: '图片上传成功',  
+    icon: 'success',  
+    duration: 2000,  
+  });  
+} catch (error) {  
+  // 上传或保存失败提示  
+  wx.showToast({  
+    title: '图片上传失败',  
+    icon: 'none',  
+    duration: 2000,  
+  });  
+  console.error('图片上传失败：', error);  
+}  
+},
 //发表评论---------------------
 submit:function(){
   //const that = this; // 缓存this引用，以便在回调函数中使用 
@@ -137,27 +247,10 @@ if(this.data.animalcontent.length==[]){//用户未输入评论
   })
   return
 }
-//if (!this.data.userInfo) {  
-  // 如果用户信息未获取，则提示用户授权  
-  /*wx.showModal({  
-    title: '提示',  
-    content: '需要获取您的昵称来提交评论，是否授权？',  
-    success: res => {  
-      if (res.confirm) {  
-        // 用户点击确定，尝试获取用户信息  
-       // this. wxGetUserInfo();
-      } else if (res.cancel) {  
-        // 用户点击取消，不做处理或提示用户无法提交评论  
-        wx.showToast({  
-          title: '未授权，无法提交评论',  
-          icon: 'none'  
-        });  
-      }  
-    }  
-  }); 
-  return// 阻止后续代码执行   
-}*/
 pinglun=this.data.animal.comment
+if (!Array.isArray(pinglun)) {  
+  pinglun = [] 
+}  
 let pinglunitem={}
 // 获取当前时间  
 let date

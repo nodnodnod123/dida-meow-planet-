@@ -1,9 +1,55 @@
 /**index.wxss**/
+page {
+  background-color: #fbf9fe;
+}
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: #eee;
   padding: 15rpx 20rpx;
+}
+
+swiper {
+  width: 100%;
+  height: calc(100vw * 327 /  491);
+}
+image {
+  width: 95%;
+}
+
+
+.ani {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* 设置阴影效果 */
+  background: linear-gradient(to right, #ff996696, #ff5e6188);  /* 设置渐变背景 */
+  background-color: #76cee917;  /* 设置背景色 */
+  border: 1px solid rgb(243, 161, 161);  /* 设置边框 */
+  border-radius: 5px;  /* 设置边框圆角 */
+  padding: 7px;  /* 设置内边距 */
+  margin: 7px;  /* 设置外边距 */
+  overflow: hidden; /* 让内容溢出时隐藏，防止影响其他组件 */
+  width: calc(90% - 14px); /* 让组件宽度为父容器的，减去外边距的两倍 */
+}
+
+// 校区按钮样式
+.button-container {
+  display: flex;
+  justify-content: space-between; /* 按钮之间留出空间 */
+  gap: 2px; /* 按钮之间的空隙 */
+  margin-right: 12px;
+  margin-top:10px;
+}
+
+// 小型按钮样式
+.small-button {
+  padding: 4px 8px; /* 减小内边距，使按钮更紧凑 */
+  border-radius: 4px; /* 减小圆角，使按钮更紧凑 */
+  font-size: 12px; /* 减小字体大小 */
+  line-height: 1.3; /* 提高行高，使字体显示更紧凑 */
+}
+
+// 按钮样式
+.orange-button {
+  background-color: #7EC0EE !important; /* 设置按钮背景颜色 */
+  color: rgb(214, 235, 137); /* 设置文字颜色为白色 */
 }
 
 .search-container{
